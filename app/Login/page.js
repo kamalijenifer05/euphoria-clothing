@@ -1,10 +1,10 @@
 "use client";
-import { useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 
-export default function Login({ onClose, setLoggedIn }) {
+const Login = ({ onClose, setLoggedIn }) => {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
@@ -150,3 +150,4 @@ const Error = styled.p`
   font-size: 12px;
   margin: 0;
 `;
+export default Login;
