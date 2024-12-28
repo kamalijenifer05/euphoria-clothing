@@ -4,7 +4,6 @@ import styled from "styled-components";
 export default function FasionBetter() {
   return (
     <Container>
-
       <LeftContainer>
         <HeadH2>WE MADE YOUR EVERYDAY FASHION BETTER!</HeadH2>
         <ParaP>
@@ -17,7 +16,6 @@ export default function FasionBetter() {
       <RightContainer>
         <RightImg src="/images/bg-5.png" />
       </RightContainer>
-      
     </Container>
   );
 }
@@ -54,9 +52,9 @@ const LeftContainer = styled.div`
   @media (max-width: 400px) {
     height: 350px;
   }
-    @media(max-width: 350px){
-    height:300px;
-    }
+  @media (max-width: 350px) {
+    height: 300px;
+  }
 `;
 const RightContainer = styled.div`
   width: 100%;
@@ -76,9 +74,9 @@ const RightContainer = styled.div`
   @media (max-width: 400px) {
     height: 350px;
   }
-    @media(max-width: 350px){
-    height:300px;
-    }
+  @media (max-width: 350px) {
+    height: 300px;
+  }
 `;
 const RightImg = styled.img`
   width: 100%;
@@ -92,9 +90,9 @@ const RightImg = styled.img`
   @media (max-width: 400px) {
     height: 350px;
   }
-    @media(max-width: 350px){
-    height:300px;
-    }
+  @media (max-width: 350px) {
+    height: 300px;
+  }
 `;
 const HeadH2 = styled.h2`
   font-size: 2rem;
@@ -136,7 +134,7 @@ const ShopButton = styled.button`
   font-weight: 600;
   font-size: 18px;
   cursor: pointer;
-  &:hover{
+  &:hover {
     background-color: rgb(183, 243, 196);
   }
   @media (max-width: 600px) {

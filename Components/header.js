@@ -81,13 +81,13 @@ export default function Header() {
         <Icon1 src="/images/cart.png" alt="search" />
       </IconDiv>
 
-      <HamburgerContainer onClick={toggleMenu} isOpen={isOpen}>
+      <HamburgerContainer onClick={toggleMenu} $isOpen={isOpen}>
         <div />
         <div />
         <div />
       </HamburgerContainer>
 
-      <MobileMenu isOpen={isOpen}>
+      <MobileMenu $isOpen={isOpen}>
         <NavItem href="/" onClick={toggleMenu}>
           Shop
         </NavItem>
@@ -231,15 +231,15 @@ const HamburgerContainer = styled.div`
     border-radius: 5px;
     transition: all 0.3s ease;
     &:nth-child(1) {
-      transform: ${({ isOpen }) =>
-        isOpen ? "rotate(45deg) translateY(8px)" : "rotate(0)"};
+      transform: ${({ $isOpen }) =>
+        $isOpen ? "rotate(45deg) translateY(8px)" : "rotate(0)"};
     }
     &:nth-child(2) {
-      opacity: ${({ isOpen }) => (isOpen ? "0" : "1")};
+      opacity: ${({ $isOpen }) => ($isOpen ? "0" : "1")};
     }
     &:nth-child(3) {
-      transform: ${({ isOpen }) =>
-        isOpen ? "rotate(-45deg) translateY(-8px)" : "rotate(0)"};
+      transform: ${({ $isOpen }) =>
+        $isOpen ? "rotate(-45deg) translateY(-8px)" : "rotate(0)"};
     }
   }
   @media (max-width: 1039px) {
@@ -254,7 +254,7 @@ const MobileMenu = styled.div`
   width: 170px;
   background-color: white;
   color: black;
-  display: ${({ isOpen }) => (isOpen ? "block" : "none")};
+  display: ${({ $isOpen }) => ($isOpen ? "block" : "none")};
   padding: 15px;
   text-align: center;
   cursor: pointer;
