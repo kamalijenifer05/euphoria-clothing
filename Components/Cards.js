@@ -115,6 +115,7 @@ const Explore = styled(Link)`
   font-weight: 500;
   border-bottom: 1px solid white;
   &:hover {
-    color: black;
+    color: #3c4242;
+    border-bottom: 1px solid  #3c4242;
   }
 `;

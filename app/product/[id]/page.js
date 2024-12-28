@@ -16,7 +16,12 @@ export default function MenProductDetailsPage({ params }) {
   const router = useRouter();
 
   const sizesToShow = product?.size || ["S", "M", "L", "XL"];
-  const colorsToShow = product?.colors || ["Red", "#EDD146", "#EB84B0", "#9C1F35"];
+  const colorsToShow = product?.colors || [
+    "Red",
+    "#EDD146",
+    "#EB84B0",
+    "#9C1F35",
+  ];
   const imagesToShow = product?.images || [
     "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
     "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
@@ -105,13 +110,13 @@ export default function MenProductDetailsPage({ params }) {
           <Path>Shop &gt; Men &gt; {product.category}</Path>
           <ProductTitle>{product.title}</ProductTitle>
           <RatingSection>
-              <Rating>
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} active={i < Math.round(product.rating.rate)}>
-                    ★
-                  </Star>
-                ))}
-              </Rating>
+            <Rating>
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} active={i < Math.round(product.rating.rate)}>
+                  ★
+                </Star>
+              ))}
+            </Rating>
             <CountTag>{product.rating.rate}</CountTag>
             <CommentsIcon src="/images/Icon.svg" alt="image"></CommentsIcon>
             <CommentText>{product.rating.count} Comments</CommentText>
@@ -305,7 +310,6 @@ const Star = styled.span`
   color: ${(props) => (props.active ? "gold" : "#ccc")};
 `;
 
-
 const PageContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -367,7 +371,7 @@ const Thumbnail = styled.img`
   }
 `;
 const ArrowButton = styled.button`
-  background-color:black;
+  background-color: black;
   border-radius: 50%;
   border: none;
   cursor: pointer;
@@ -422,17 +426,22 @@ const ProductTitle = styled.h2`
   margin-bottom: 10px;
   width: 600px;
   @media screen and (max-width: 1040px) {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+    width: 500px;
+  }
+  @media screen and (min-width: 1040px) and (max-width: 1200px) {
+    font-size: 1.4rem;
+    max-width: 280px;
   }
   @media screen and (min-width: 801px) and (max-width: 980px) {
     font-size: 1.4rem;
     max-width: 280px;
   }
   @media screen and (min-width: 601px) and (max-width: 800px) {
-    width: 500px;
+    width: 400px;
   }
   @media screen and (min-width: 471px) and (max-width: 600px) {
-    width: 400px;
+    width: 300px;
   }
   @media screen and (max-width: 470px) {
     font-size: 1.4rem;
@@ -593,7 +602,7 @@ const AddToCartButton = styled.button`
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color:rgb(183, 243, 196);
+    background-color: rgb(183, 243, 196);
   }
   @media screen and (max-width: 470px) {
     padding: 15px 20px;
@@ -714,6 +723,7 @@ const TabsContainer = styled.div`
   gap: 25px;
   align-items: first baseline;
   margin-top: 20px;
+  cursor: pointer;
   @media screen and (max-width: 535px) {
     flex-wrap: wrap;
   }
@@ -727,7 +737,7 @@ const Tab1 = styled.div`
   gap: 15px;
 `;
 const Line = styled.div`
-  width: 4rem;
+  width: 6.5rem;
   height: 1px;
   background-color: #000000;
 `;
@@ -769,6 +779,12 @@ const Description = styled.p`
   line-height: 30px;
   letter-spacing: 2%;
   width: 610px;
+  @media (max-width: 700px){
+    width: 400px;
+  }
+  @media (max-width: 500px){
+    width: 300px;
+  }
 `;
 
 const DetailsContainer = styled.div`
@@ -810,6 +826,9 @@ const Value = styled.span`
 const CategoryContainer = styled.div`
   width: 80%;
   margin: 50px auto 50px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   @media screen and (max-width: 470px) {
     margin: 20px;
   }
@@ -842,9 +861,9 @@ const Heading1 = styled.h1`
 `;
 
 const ProductGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   @media (max-width: 1024px) {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -878,9 +897,6 @@ const LikeButton = styled.div`
 const SimilarProductImage = styled.img`
   width: auto;
   height: 393.26px;
-  gap: 0px;
-  border-radius: 10px 0px 0px 0px;
-  opacity: 0px;
   cursor: pointer;
   @media screen and (max-width: 800px) {
     max-height: 250px;

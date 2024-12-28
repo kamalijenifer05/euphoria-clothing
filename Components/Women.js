@@ -47,7 +47,7 @@ export default function Women() {
             <CategoriesBottom>
               <ProductName>
                 <Title>{product.title}</Title>
-                <Paragraph>Explore Now!</Paragraph>
+                <Paragraph href="/Hoodies">Explore Now!</Paragraph>
               </ProductName>
               <ArrowDiv>
                 <Link href={`/product/${product.id}`}>
@@ -137,11 +137,12 @@ const Title = styled.h5`
   text-overflow: ellipsis;
   max-width: 100px;
 `;
-const Paragraph = styled.p`
+const Paragraph = styled(Link)`
   color: #7f7f7f;
   font-size: 13px;
   font-weight: 500;
   margin: 0;
+  text-decoration: none;
 `;
 
 const ArrowDiv = styled.div`

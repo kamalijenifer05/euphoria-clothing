@@ -113,7 +113,8 @@ const HeadH2 = styled.h2`
   }
 `;
 const ParaP = styled.p`
-  font-weight: 200;
+  font-size: 20px;
+  font-weight: 300;
   padding-bottom: 1.5rem;
   @media (max-width: 800px) {
     font-size: 1rem;
@@ -133,7 +134,12 @@ const ShopButton = styled.button`
   background: #fff;
   border: none;
   border-radius: 5px;
-  font-weight: bold;
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+  &:hover{
+    background-color: rgb(183, 243, 196);
+  }
   @media (max-width: 600px) {
     font-size: 0.7rem;
   }
