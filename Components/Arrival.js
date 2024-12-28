@@ -116,8 +116,7 @@ const Heading = styled.h1`
   }
 `;
 
-const ProductCard = styled.div`
-`;
+const ProductCard = styled.div``;
 const ProductImage = styled.img`
   display: block;
   width: 100%;

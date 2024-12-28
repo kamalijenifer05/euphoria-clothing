@@ -1,5 +1,4 @@
 "use client";
-
 import { useState, useEffect } from "react";
 import styled from "styled-components";
 import Link from "next/link";
@@ -82,14 +81,12 @@ export default function Header() {
         <Icon1 src="/images/cart.png" alt="search" />
       </IconDiv>
 
-      {/* Hamburger Button */}
-      <HamburgerContainer onClick={toggleMenu}  isOpen={isOpen}>
+      <HamburgerContainer onClick={toggleMenu} isOpen={isOpen}>
         <div />
         <div />
         <div />
       </HamburgerContainer>
 
-      {/* Mobile Menu */}
       <MobileMenu isOpen={isOpen}>
         <NavItem href="/" onClick={toggleMenu}>
           Shop
@@ -115,11 +112,6 @@ export default function Header() {
   );
 }
 const SearchBoxWrapper = styled.div`
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  padding: 7px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -130,7 +122,7 @@ const SearchBoxWrapper = styled.div`
   @media (min-width: 702px) {
     display: none;
   }
-  @media (min-width:360px) and (max-width: 529px){
+  @media (min-width: 360px) and (max-width: 529px) {
     padding: 10px;
     gap: 5px;
   }
@@ -154,10 +146,8 @@ const LogoImage = styled.img``;
 
 const MiddleDiv = styled.div`
   display: flex;
-  /* justify-content: center; */
   justify-content: space-around;
   align-items: center;
-  /* padding: 9px 179px; */
   @media (min-width: 360px) and (max-width: 1039px) {
     display: none;
   }
@@ -201,7 +191,7 @@ const SearchInput = styled.input`
   outline: none;
   font-size: 14px;
   color: black;
-  @media (min-width:360px) and (max-width: 529px){
+  @media (min-width: 360px) and (max-width: 529px) {
     font-size: 10px;
   }
 `;
@@ -211,9 +201,6 @@ const IconDiv = styled.div`
   justify-content: center;
   align-items: center;
   gap: 12px;
-  @media (max-width: 1360px) {
-    /* gap: 5px; */
-  }
 `;
 const Icon1 = styled.img`
   background-color: #f6f6f6;
@@ -255,9 +242,8 @@ const HamburgerContainer = styled.div`
         isOpen ? "rotate(-45deg) translateY(-8px)" : "rotate(0)"};
     }
   }
-
   @media (max-width: 1039px) {
-    display: flex; 
+    display: flex;
   }
 `;
 
@@ -275,18 +261,16 @@ const MobileMenu = styled.div`
   border-radius: 8px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 998;
-
   a {
     color: black;
     text-decoration: none;
     display: block;
     padding: 10px;
     &:hover {
-      background-color:rgb(151, 149, 149);
+      background-color: rgb(151, 149, 149);
     }
   }
-
   @media (min-width: 1039px) {
-    display: none; /* Hide mobile menu on larger screens */
+    display: none;
   }
 `;

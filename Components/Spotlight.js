@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useRef } from "react";
 import Slider from "react-slick";
 import { useRouter } from "next/navigation";
@@ -126,7 +125,6 @@ const Heading1 = styled.h3`
     font-size: 0.6rem;
   }
 `;
-
 const Heading2 = styled.h1`
   font-size: 60px;
   font-weight: 700;
@@ -147,7 +145,6 @@ const Heading2 = styled.h1`
     font-size: 1rem;
   }
 `;
-
 const Paragraph = styled.p`
   font-size: 30px;
   font-weight: 300;
@@ -161,7 +158,6 @@ const Paragraph = styled.p`
     font-size: 0.5rem;
   }
 `;
-
 const Button = styled.button`
   padding: 16px 72px;
   margin-top: 20px;
@@ -173,7 +169,6 @@ const Button = styled.button`
   font-size: 20px;
   font-weight: 500;
   transition: background-color 0.3s;
-
   &:hover {
     background-color: black;
     color: #fff;
@@ -205,7 +200,6 @@ const Arrow = styled.button`
   font-size: 4rem;
   font-weight: 200;
   z-index: 1;
-
   @media screen and (max-width: 980px) {
     top: 27rem;
   }

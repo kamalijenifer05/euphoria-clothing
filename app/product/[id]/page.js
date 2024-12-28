@@ -880,7 +880,6 @@ const ProductCard = styled.div`
 const LikeButton = styled.div`
   position: relative;
   z-index: 5;
-
   svg {
     background: #f8f8f8;
     padding: 2% 2%;

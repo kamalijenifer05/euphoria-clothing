@@ -1,8 +1,7 @@
 "use client";
-
 import styled from "styled-components";
 
-function FasionBetter() {
+export default function FasionBetter() {
   return (
     <Container>
 
@@ -149,5 +148,3 @@ const ShopButton = styled.button`
     padding: 2% 4%;
   }
 `;
-
-export default FasionBetter;

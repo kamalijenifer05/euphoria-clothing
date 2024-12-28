@@ -1,5 +1,4 @@
 "use client";
-
 import { useState, useEffect } from "react";
 import styled from "styled-components";
 import axios from "axios";
@@ -133,7 +132,6 @@ const CategoryImage = styled.img`
 const LikeButton = styled.div`
   position: relative;
   z-index: 5;
-
   svg {
     background: #f8f8f8;
     padding: 2% 2%;
