@@ -57,7 +57,10 @@ export default function Header() {
 
       <SearchDiv>
         <SearchIcon src="/images/search.png" alt="search" />
-        <SearchInput type="text" placeholder="Search..." />
+        <SearchInput
+          type="text"
+          placeholder="Search..."
+        />
       </SearchDiv>
 
       <SearchBoxWrapper>
@@ -66,7 +69,12 @@ export default function Header() {
           alt="search"
           onClick={toggleSearch}
         />
-        {isSearchVisible && <SearchInput type="text" placeholder="Search..." />}
+        {isSearchVisible && (
+          <SearchInput
+            type="text"
+            placeholder="Search..."
+          />
+        )}
       </SearchBoxWrapper>
 
       <IconDiv>

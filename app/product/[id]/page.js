@@ -70,8 +70,8 @@ export default function MenProductDetailsPage({ params }) {
     }));
   };
 
-  const handleProductClick = (id) => {
-    router.push(`/product/${id}`);
+  const handleProductClick = (productId) => {
+    router.push(`/product/${productId}`);
   };
 
   useEffect(() => {
@@ -997,3 +997,5 @@ const ProductPrice = styled.button`
     max-width: 100px;
   }
 `;
+
+
