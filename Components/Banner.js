@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import styled from "styled-components";
 
 export default function FasionBetter() {
@@ -10,7 +11,7 @@ export default function FasionBetter() {
           In our journey to improve everyday fashion, euphoria presents EVERYDAY
           wear range - Comfortable & Affordable fashion 24/7
         </ParaP>
-        <ShopButton>Shop Now</ShopButton>
+        <ShopButton href="/Hoodies">Shop Now</ShopButton>
       </LeftContainer>
 
       <RightContainer>
@@ -124,8 +125,9 @@ const ParaP = styled.p`
     padding-bottom: 1rem;
   }
 `;
-const ShopButton = styled.button`
+const ShopButton = styled(Link)`
   width: fit-content;
+  text-decoration: none;
   padding: 2% 8%;
   color: #000;
   background: #fff;
