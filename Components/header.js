@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import LoginForm from "../app/Login/page";
+import Popup from "../Components/Popup";
 
 export default function Header() {
   const Router = useRouter();
@@ -114,7 +114,7 @@ export default function Header() {
       </MobileMenu>
 
       {isLoginFormVisible && (
-        <LoginForm onClose={toggleLoginForm} setLoggedIn={setIsLoggedIn} />
+        <Popup onClose={toggleLoginForm} setLoggedIn={setIsLoggedIn} />
       )}
     </HeaderContainer>
   );
